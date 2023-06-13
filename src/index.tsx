@@ -1,10 +1,18 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import ReactDOM from 'react-dom/client';
+import './index.css';
 
 class App extends React.Component {
   render() {
-    return <div>Hi there</div>;
+    return <div>XxXxX</div>;
   }
 }
 
-ReactDOM.render(<App />, document.querySelector('#root'));
+const root = ReactDOM.createRoot(
+  document.getElementById('root') as HTMLElement
+);
+root.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);
