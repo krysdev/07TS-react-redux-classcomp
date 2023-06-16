@@ -6,5 +6,6 @@
 // and to be fair this is sufficient for the redux to work, as it is unique enough to identify the action types
 
 export enum ActionTypes {
-  fetchTodos
+  fetchTodos,
+  someOther,
 }
