@@ -8,6 +8,12 @@ interface Todo {
   completed: boolean;
 }
 
+// describes the action object in 'dispatch'
+interface FetchTodosAction {
+  type: ActionTypes.fetchTodos;
+  payload: Todo[];
+}
+
 const url = 'https://jsonplaceholder.typicode.com/todos';
 
 export const fetchTodos = () => {
@@ -15,9 +21,9 @@ export const fetchTodos = () => {
     // response.data is an array of Todo objects (see the interface)
     const response = await axios.get<Todo[]>(url);
 
-    dispatch({
+    dispatch <FetchTodosAction> ({
       type: ActionTypes.fetchTodos, // taken from the enum object
-      payload: response.data
+      payload: response.data,
     });
   };
 };

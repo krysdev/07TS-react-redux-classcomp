@@ -7,5 +7,5 @@
 
 export enum ActionTypes {
   fetchTodos,
-  someOther,
+
 }
