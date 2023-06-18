@@ -2,14 +2,14 @@ import axios from 'axios';
 import { Dispatch } from 'redux'; // type definition
 import { ActionTypes } from './types'; // enum
 
-interface Todo {
+export interface Todo {
   id: number;
   title: string;
   completed: boolean;
 }
 
 // describes the action object in 'dispatch'
-interface FetchTodosAction {
+export interface FetchTodosAction {
   type: ActionTypes.fetchTodos;
   payload: Todo[];
 }
