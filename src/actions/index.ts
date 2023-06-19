@@ -14,7 +14,8 @@ export interface FetchTodosAction {
   payload: Todo[];
 }
 
-const url = 'https://jsonplaceholder.typicode.com/todos';
+// const url = 'https://jsonplaceholder.typicode.com/todos';
+const url = 'http://127.0.0.1:3005/todos';
 
 export const fetchTodos = () => {
   return async (dispatch: Dispatch) => {
