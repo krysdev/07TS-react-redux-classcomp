@@ -1,3 +1,6 @@
+import { FetchTodosAction, DeleteTodoAction } from "./todos";
+
+
 // This is ENUM for all redux action types used by dispatch (not TS types)
 
 // TS assignes by default an incremental value to the key
@@ -7,5 +10,9 @@
 
 export enum ActionTypes {
   fetchTodos,
-
+  deleteTodo,
 }
+
+
+// type alias to be used in all of the different reducers
+export type Action = FetchTodosAction | DeleteTodoAction
